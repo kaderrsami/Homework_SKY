@@ -64,4 +64,15 @@ So, what’s the big picture? Ethereum’s still king, but it’s sweating. Sola
 
 Exercise 2:
 Part A & B:
+RemixIDE deploy:
 0x447c7665dc0db3e6901876595c5211cb98de657d0010b793597f172e8ac1e02f
+Forge deploy:
+0x7Dd54189E1F8087da992722a5e6Cb6Ab894E6aB8
+
+I did my call on JB's contract on the following addresses: 
+Part A:
+0x6f25ffC0Cff74017f6B06403b39f2911d4962DcB
+Part B:0x5c45642B0c4fbc2d4E129984c3443e35C56d7b30
+
+Everything worked correctly, so his code is all good!
+The screenshots of the results are in the `img` folder.
