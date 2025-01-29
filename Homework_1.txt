@@ -1,0 +1,67 @@
+Exercise 1:
+Part A:
+5. connecting frontend to smart contrats
+
+Message: "Success! Your current Balance is 107731741305766800 Wei"
+
+I have a sum of 0.1077 Sepolia ETH on my metamask, which is accurate.
+
+The following HTML function requests the metamask balance of the user and give the amount of ETH in Wei:
+
+"
+async () => {
+  if (typeof window.ethereum !== 'undefined') {
+    const accounts = await ethereum.request({
+      method: 'eth_requestAccounts'
+    });
+    const currentAccount = accounts[0];
+    await ethereum.request({
+      method: 'eth_getBalance',
+      params: [currentAccount, 'latest']
+    }).then(
+      (value) => {
+        const decBalance = HexToWei(value);
+        alert("Success! Your current Balance is " + decBalance + " Wei");
+      }, (reason) => {
+        alert("getBalance failed due to " + reason);
+      });
+  } else {
+    alert("Install MetaMask or connect a provider");
+  }
+}
+"
+
+Part B:
+The Linux Foundation announced that the Software Package Data Exchange (SPDX), a specification for documenting software components and their details in a Software Bill of Materials (SBOM), has become an official international standard (ISO/IEC 5962:2021). SPDX, developed over a decade with input from major companies like Intel, Microsoft, and Siemens, helps organizations track open-source and proprietary software components in applications to improve security, compliance, and transparency across global supply chains. By standardizing how software origins, licenses, and vulnerabilities are reported, SPDX addresses growing needs for safer software development, especially as modern apps rely heavily on prebuilt components. The Linux Foundation highlighted SPDX’s role in meeting international regulations and invited broader collaboration to evolve the standard further.
+
+----
+
+- New DeFi Project (novel staking/rewards mechanism)
+A strong choice here is the GNU Affero General Public License (AGPL‑3.0).
+
+    Why? In decentralized finance, much of the code runs as a networked service (e.g., via a node or on-chain). AGPL ensures that any modifications or improvements to your novel smart-contract or back-end must be made public—even if the software is merely run “as a service” rather than distributed. This fosters openness and trust for DeFi users.
+
+- Google Cloud Web3 Libraries (keeping core proprietary, open-sourcing select libraries)
+A common choice here is the Apache License 2.0.
+
+    Why? Apache 2.0 is a permissive license that allows commercial and proprietary use of the open-sourced components, which is exactly what Google needs. Third parties can build on or integrate the open-source libraries freely, while Google can still keep its core code and proprietary features closed. It also includes important patent-grant language that large enterprises (like Google) typically require.
+
+----
+Part C:
+
+A Virtual Machine (VM) is like a computer inside a computer. You allocate a portion of your main machine’s computational power (like CPU, RAM, or storage) to run a parallel process, often in a different operating system. This creates a quarantined environment, isolating tasks (e.g., testing software or running untrusted apps) from your primary system. I use VMs mostly for security testing shady programs I don’t trust or avoiding crashes on my main machine.
+
+The EVM (Ethereum Virtual Machine) is the “engine” behind Ethereum. It’s a globally distributed, sandboxed virtual machine that executes smart contracts. Every Ethereum node runs the EVM to process transactions and keep the network in sync, making sure that the decentralized apps behave the same way for everyone. The EVM uses gas to price computational work, which stops spam or infinite loops from clogging the system.
+
+The SVM (Solana Virtual Machine) is the runtime powerhouse for Solana. Unlike the EVM, the SVM is built for speed and cheap transactions, thanks to Solana’s tricks like Proof of History and parallel execution. While the EVM is all about flexibility for complex smart contracts, the SVM prioritizes scalability and throughput—perfect for apps like DeFi or games that need lightning-fast performance.
+
+Now, looking at developer activity, things get spicy. The EVM stack and Ethereum are still the big dogs, with over 3,500 and 2,100 full-time devs respectively. But both are losing steam: Ethereum’s full-time dev count dropped ~10% this year, and the EVM ecosystem overall is down ~8%. Even established contributors are dipping—probably because newer chains are stealing the spotlight (and maybe profits).
+
+Solana and the SVM stack, though smaller, are the exceptions. Solana’s full-time devs jumped 15% this year, and the SVM ecosystem grew nearly 15% too. My guess? High-profile crypto projects (and influencers) are hyping Solana’s speed and low costs, luring devs chasing quick gains. But here’s the twist: over the past two years, SVM and Solana actually lost ~23% of their devs. It’s a classic crypto rollercoaster—short-term hype masks long-term uncertainty.
+Then there’s Polkadot, which is… not having a good time. Its full-time dev numbers cratered by ~25% this year, and over two years, it’s down a brutal ~35%. Even established contributors are bailing. My take? Polkadot’s complexity and niche focus (interoperability) might be losing out to flashier, faster chains like Solana.
+
+So, what’s the big picture? Ethereum’s still king, but it’s sweating. Solana’s riding a hype wave (for now), and Polkadot’s stuck in the shadows. Crypto’s all about momentum—today’s hot ecosystem could be tomorrow’s ghost town, and vice versa. Just follow the devs… and the money.
+
+Exercise 2:
+Part A & B:
+0x447c7665dc0db3e6901876595c5211cb98de657d0010b793597f172e8ac1e02f
