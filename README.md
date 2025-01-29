@@ -1,7 +1,66 @@
-# Homework Repository
+## Foundry
 
-Homework assignments are released here weekly on Sundays. The submission deadline is the next Sunday midnight. Please email the professor with a Github link of your work. For group work, please only email one link per group. Your contributions to the group work will be evaluated via the commit and PR history.
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-Prerequisite.md contains all installation and tooling instructions for this class. It is useful to refer back to it when there are tooling issues.
+Foundry consists of:
 
-Lastly, please don't hesitate to ask for help or post reminders on the Discord! If you are a student and answering a colleague's question, **please do not paste homework answers directly in Discord**. Work on a policy of explaining the concept behind the solution, not the solution itself.
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+
+## Documentation
+
+https://book.getfoundry.sh/
+
+## Usage
+
+### Build
+
+```shell
+$ forge build
+```
+
+### Test
+
+```shell
+$ forge test
+```
+
+### Format
+
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
